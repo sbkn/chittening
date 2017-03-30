@@ -1,9 +1,9 @@
 import React from "react";
 import {Provider} from "react-redux";
 import renderer from "react-test-renderer";
-import Form from "../Form.react.jsx";
+import MyForm from "../MyForm.react.jsx";
 
-describe("Form", () => {
+describe("MyForm", () => {
 
 	it("should render correctly", () => {
 
@@ -15,7 +15,7 @@ describe("Form", () => {
 
 		const tree = renderer.create(
 			<Provider store={ mockStore }>
-				<Form form="mockFormName"/>
+				<MyForm form="mockFormName"/>
 			</Provider>
 		).toJSON();
 

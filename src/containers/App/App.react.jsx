@@ -4,7 +4,8 @@ import {combineReducers} from "redux-immutable";
 import {Provider} from "react-redux";
 import {reducer as formReducer} from "redux-form/immutable";
 import {Map} from "immutable";
-import Form from "../Form/Form.react.jsx";
+import Bluekit from "react-bluekit";
+import componentsIndex from "../../componentsIndex.js";
 
 const reducers = {
 	form: formReducer
@@ -19,7 +20,7 @@ const store = createStore(rootReducer, initialState, composeEnhancers(middleware
 
 const App = () => (
 	<Provider store={ store }>
-		<Form form="someFormName"/>
+		<Bluekit componentsIndex={componentsIndex}/>
 	</Provider>
 );
 

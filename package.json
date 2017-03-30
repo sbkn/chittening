@@ -9,7 +9,8 @@
     "test:watch": "npm test -- --watch",
     "test:cov": "npm test -- --coverage",
     "lint": "./node_modules/.bin/eslint ./src/**/*.jsx",
-    "lint:report": "./node_modules/.bin/eslint ./src/**/*.jsx -f html -o eslint-report.html"
+    "lint:report": "./node_modules/.bin/eslint ./src/**/*.jsx -f html -o eslint-report.html",
+    "bluekit": "bluekit --baseDir ./src --paths . --exclude \"./containers/App/App.react.jsx\""
   },
   "repository": {
     "type": "git",
@@ -46,6 +47,7 @@
     "node-sass": "^4.5.1",
     "react": "^15.4.2",
     "react-addons-test-utils": "^15.4.2",
+    "react-bluekit": "^0.4.2",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.3",
     "react-test-renderer": "^15.4.2",
@@ -61,7 +63,8 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
-      "!src/index.jsx"
+      "!src/index.jsx",
+      "!src/componentsIndex.js"
     ]
   }
 }
